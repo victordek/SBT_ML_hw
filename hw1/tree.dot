@@ -1,0 +1,32 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+0 [label="account_status <= -0.5\ngini = 0.42\nsamples = 1000\nvalue = [700, 300]\nclass = Good", fillcolor="#e5813992"] ;
+1 [label="other_installment_plans <= 0.5\ngini = 0.2062\nsamples = 394\nvalue = [348, 46]\nclass = Good", fillcolor="#e58139dd"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="age_in_years <= 30.5\ngini = 0.1502\nsamples = 330\nvalue = [303, 27]\nclass = Good", fillcolor="#e58139e8"] ;
+1 -> 2 ;
+3 [label="gini = 0.2622\nsamples = 116\nvalue = [98, 18]\nclass = Good", fillcolor="#e58139d0"] ;
+2 -> 3 ;
+4 [label="gini = 0.0806\nsamples = 214\nvalue = [205, 9]\nclass = Good", fillcolor="#e58139f4"] ;
+2 -> 4 ;
+5 [label="present_employment_since <= 5.5\ngini = 0.4175\nsamples = 64\nvalue = [45, 19]\nclass = Good", fillcolor="#e5813993"] ;
+1 -> 5 ;
+6 [label="gini = 0.4922\nsamples = 32\nvalue = [18, 14]\nclass = Good", fillcolor="#e5813939"] ;
+5 -> 6 ;
+7 [label="gini = 0.2637\nsamples = 32\nvalue = [27, 5]\nclass = Good", fillcolor="#e58139d0"] ;
+5 -> 7 ;
+8 [label="duration <= 22.5\ngini = 0.4869\nsamples = 606\nvalue = [352, 254]\nclass = Good", fillcolor="#e5813947"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="credit_history <= 0.5\ngini = 0.4438\nsamples = 349\nvalue = [233, 116]\nclass = Good", fillcolor="#e5813980"] ;
+8 -> 9 ;
+10 [label="gini = 0.4146\nsamples = 317\nvalue = [224, 93]\nclass = Good", fillcolor="#e5813995"] ;
+9 -> 10 ;
+11 [label="gini = 0.4043\nsamples = 32\nvalue = [9, 23]\nclass = Bad", fillcolor="#399de59b"] ;
+9 -> 11 ;
+12 [label="savings_account <= 0.5\ngini = 0.4973\nsamples = 257\nvalue = [119, 138]\nclass = Bad", fillcolor="#399de523"] ;
+8 -> 12 ;
+13 [label="gini = 0.42\nsamples = 40\nvalue = [28, 12]\nclass = Good", fillcolor="#e5813992"] ;
+12 -> 13 ;
+14 [label="gini = 0.487\nsamples = 217\nvalue = [91, 126]\nclass = Bad", fillcolor="#399de547"] ;
+12 -> 14 ;
+}
